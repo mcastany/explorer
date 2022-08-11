@@ -3,7 +3,7 @@
   "info": {
     "title": "Google API Explorer",
     "version": "1.0.0",
-    "description": "Sample explorer to use a service account to query google\"s billing API"
+    "description": "Sample explorer to use a service account to query google\"s billing API\nYou can check the Google Play Android Developer API -> https://developers.google.com/android-publisher/api-ref/rest\nYou can follow this doc to create the service account -> https://docs.revenuecat.com/docs/creating-play-service-credentials"
   },
   "servers": [{
     "url": "https://androidpublisher.googleapis.com/androidpublisher/v3"
