@@ -1,0 +1,97 @@
+{
+    "openapi": "3.0.2",
+    "info": {
+      "title": "Google API Explorer",
+      "version": "1.0.0",
+      "description": "Sample explorer to use a service account to query google\"s billing API"
+    },
+    "servers": [
+      { "url": "https://androidpublisher.googleapis.com/androidpublisher/v3" }
+    ],
+    "consumes": ["application/json"],
+    "produces": ["application/json"],
+    "security": [{ "google": []}],
+    "paths": {
+      "/applications/{packageName}/purchases/subscriptionsv2/tokens/{token}": {
+        "get": {
+          "tags": ["subscriptionsV2.get"],
+          "parameters": [{
+            "in": "path",
+            "name": "packageName",
+            "required": true,
+            "type": "string"
+          },{
+            "in": "path",
+            "name": "token",
+            "required": true,
+            "type": "string"
+          }],
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
+          }
+        }
+      },
+      "/applications/{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}": {
+        "get": {
+          "tags": ["subscriptions.get"],
+          "parameters": [{
+            "in": "path",
+            "name": "packageName",
+            "required": true,
+            "type": "string"
+          },{
+            "in": "path",
+            "name": "subscriptionId",
+            "required": true,
+            "type": "string"
+          }
+          ,{
+            "in": "path",
+            "name": "token",
+            "required": true,
+            "type": "string"
+          }],
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
+          }
+        }
+      },
+      "/applications/{packageName}/subscriptions/{productId}":{
+        "get": {
+          "tags": ["monetization"],
+          "parameters": [{
+            "in": "path",
+            "name": "packageName",
+            "required": true,
+            "type": "string"
+          },{
+            "in": "path",
+            "name": "productId",
+            "required": true,
+            "type": "string"
+          }],
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "securitySchemes":{
+        "google": {
+          "type": "oauth2",
+          "flows": {
+            "googleServiceAccount": {
+              "tokenUrl": "https://oauth2.googleapis.com/token"
+            }
+          }
+        }
+      }
+    }
+  }

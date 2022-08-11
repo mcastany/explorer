@@ -12,112 +12,12 @@
 
 <body>
   <div id="swagger-ui"></div>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jose/4.8.3/index.umd.min.js"></script> -->
   <script src="./scripts/swagger-ui-bundle.js"></script>
   <script src="./scripts/swagger-ui-standalone-preset.js"></script>
   <script>
-    const spec = {
-      openapi: '3.0.2',
-      info: {
-        title: "Google API Explorer",
-        version: '1.0.0',
-        description: 'Sample explorer to use a service account to query google\'s billing API'
-      },
-      servers: [
-        { url: 'https://androidpublisher.googleapis.com/androidpublisher/v3' }
-      ],
-      consumes: ['application/json'],
-      produces: ['application/json'],
-      security: [{ googleServiceAuth: []}],
-      paths: {
-        '/applications/{packageName}/purchases/subscriptionsv2/tokens/{token}': {
-          get: {
-            tags: ['subscriptionsV2.get'],
-            parameters: [{
-              in: 'path',
-              name: 'packageName',
-              required: true,
-              type: 'string'
-            },{
-              in: 'path',
-              name: 'token',
-              required: true,
-              type: 'string'
-            }],
-            responses: {
-              '200': {
-                description: 'OK'
-              }
-            }
-          }
-        },
-        '/applications/{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}': {
-          get: {
-            tags: ['subscriptions.get'],
-            parameters: [{
-              in: 'path',
-              name: 'packageName',
-              required: true,
-              type: 'string'
-            },{
-              in: 'path',
-              name: 'subscriptionId',
-              required: true,
-              type: 'string'
-            },{
-              in: 'path',
-              name: 'token',
-              required: true,
-              type: 'string'
-            }],
-            responses: {
-              '200': {
-                description: 'OK'
-              }
-            }
-          }
-        },
-        '/applications/{packageName}/subscriptions/{productId}':{
-          get: {
-            tags: ['monetization'],
-            parameters: [{
-              in: 'path',
-              name: 'packageName',
-              required: true,
-              type: 'string'
-            },{
-              in: 'path',
-              name: 'productId',
-              required: true,
-              type: 'string'
-            }],
-            responses: {
-              '200': {
-                description: 'OK'
-              }
-            }
-          }
-        },
-      },
-      components: {
-        securitySchemes:{
-          googleServiceAuth: {
-            type: "oauth2",
-            flows: {
-              googleServiceAccount: {
-                tokenUrl: "https://oauth2.googleapis.com/token"
-              },
-            }
-          }
-        },
-      },
-    }
-
-
     window.onload = () => {
       window.ui = SwaggerUIBundle({
-        // url: 'https://petstore3.swagger.io/api/v3/openapi.json',
-        spec: spec,
+        url: './api/spec.json',
         supportedSubmitMethods: ["get"],
         dom_id: '#swagger-ui'
       });
