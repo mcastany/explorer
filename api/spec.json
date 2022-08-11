@@ -14,7 +14,7 @@
   "paths": {
     "/applications/{packageName}/purchases/subscriptionsv2/tokens/{token}": {
       "get": {
-        "tags": ["Subscriptions V2"],
+        "tags": ["Purchase Subscriptions V2"],
         "parameters": [{
           "in": "path",
           "name": "packageName",
@@ -35,7 +35,7 @@
     },
     "/applications/{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}": {
       "get": {
-        "tags": ["Subscriptions V1"],
+        "tags": ["Purchase Subscriptions V1"],
         "parameters": [{
           "in": "path",
           "name": "packageName",
@@ -95,61 +95,140 @@
           }
         }
       }
-    }
-  },
-  "/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}/offers": {
-    "get": {
-      "tags": ["Monetization"],
-      "parameters": [{
-        "in": "path",
-        "name": "packageName",
-        "required": true,
-        "type": "string"
-      }, {
-        "in": "path",
-        "name": "productId",
-        "required": true,
-        "type": "string"
-      }, {
-        "in": "path",
-        "name": "basePlanId",
-        "required": true,
-        "type": "string"
-      }],
-      "responses": {
-        "200": {
-          "description": "OK"
+    },
+    "/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}/offers": {
+      "get": {
+        "tags": ["Monetization"],
+        "parameters": [{
+          "in": "path",
+          "name": "packageName",
+          "required": true,
+          "type": "string"
+        }, {
+          "in": "path",
+          "name": "productId",
+          "required": true,
+          "type": "string"
+        }, {
+          "in": "path",
+          "name": "basePlanId",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
         }
       }
-    }
-  },
-  "/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}/offers/{offerId}": {
-    "get": {
-      "tags": ["Monetization"],
-      "parameters": [{
-        "in": "path",
-        "name": "packageName",
-        "required": true,
-        "type": "string"
-      }, {
-        "in": "path",
-        "name": "productId",
-        "required": true,
-        "type": "string"
-      }, {
-        "in": "path",
-        "name": "basePlanId",
-        "required": true,
-        "type": "string"
-      }, {
-        "in": "path",
-        "name": "offerId",
-        "required": true,
-        "type": "string"
-      }],
-      "responses": {
-        "200": {
-          "description": "OK"
+    },
+    "/applications/{packageName}/subscriptions/{productId}/basePlans/{basePlanId}/offers/{offerId}": {
+      "get": {
+        "tags": ["Monetization"],
+        "parameters": [{
+          "in": "path",
+          "name": "packageName",
+          "required": true,
+          "type": "string"
+        }, {
+          "in": "path",
+          "name": "productId",
+          "required": true,
+          "type": "string"
+        }, {
+          "in": "path",
+          "name": "basePlanId",
+          "required": true,
+          "type": "string"
+        }, {
+          "in": "path",
+          "name": "offerId",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/applications/{packageName}/purchases/products/{productId}/tokens/{token}": {
+      "get": {
+        "tags": ["Purchase Products"],
+        "parameters": [{
+          "in": "path",
+          "name": "packageName",
+          "required": true,
+          "type": "string"
+        }, {
+          "in": "path",
+          "name": "productId",
+          "required": true,
+          "type": "string"
+        }, {
+          "in": "path",
+          "name": "token",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/applications/{packageName}/purchases/voidedpurchases": {
+      "get": {
+        "tags": ["Void Purchases"],
+        "parameters": [{
+          "in": "path",
+          "name": "packageName",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/applications/{packageName}/inappproducts": {
+      "get": {
+        "tags": ["InApp Products"],
+        "parameters": [{
+          "in": "path",
+          "name": "packageName",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/applications/{packageName}/inappproducts/{sku}": {
+      "get": {
+        "tags": ["InApp Products"],
+        "parameters": [{
+          "in": "path",
+          "name": "packageName",
+          "required": true,
+          "type": "string"
+        }, {
+          "in": "path",
+          "name": "sku",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
         }
       }
     }
