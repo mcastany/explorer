@@ -9,5 +9,5 @@ jobs:
       - name: OpenAPI Lint Checks
         uses: nwestfall/openapi-action@v1.0.2
         with:
-          github_token: ${{ secrets.GH_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           file: api/google.json
