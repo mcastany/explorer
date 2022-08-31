@@ -19,12 +19,16 @@
           "in": "path",
           "name": "packageName",
           "required": true,
-          "type": "string"
+          "schema":{
+            "type": "string"
+          }
         }, {
           "in": "path",
           "name": "token",
           "required": true,
-          "type": "string"
+          "schema":{
+            "type": "string"
+          }
         }],
         "responses": {
           "200": {
@@ -40,12 +44,16 @@
           "in": "path",
           "name": "packageName",
           "required": true,
-          "type": "string"
+          "schema":{
+            "type": "string"
+          }
         }, {
           "in": "path",
           "name": "subscriptionId",
           "required": true,
-          "type": "string"
+          "schema":{
+            "type": "string"
+          }
         }, {
           "in": "path",
           "name": "token",
@@ -66,7 +74,9 @@
           "in": "path",
           "name": "packageName",
           "required": true,
-          "type": "string"
+          "schema":{
+            "type": "string"
+          }
         }],
         "responses": {
           "200": {
@@ -82,12 +92,16 @@
           "in": "path",
           "name": "packageName",
           "required": true,
-          "type": "string"
+          "schema":{
+            "type": "string"
+          }
         }, {
           "in": "path",
           "name": "productId",
           "required": true,
-          "type": "string"
+          "schema":{
+            "type": "string"
+          }
         }],
         "responses": {
           "200": {
@@ -103,17 +117,23 @@
           "in": "path",
           "name": "packageName",
           "required": true,
-          "type": "string"
+          "schema":{
+            "type": "string"
+          }
         }, {
           "in": "path",
           "name": "productId",
           "required": true,
-          "type": "string"
+          "schema":{
+            "type": "string"
+          }
         }, {
           "in": "path",
           "name": "basePlanId",
           "required": true,
-          "type": "string"
+          "schema":{
+            "type": "string"
+          }
         }],
         "responses": {
           "200": {
@@ -129,22 +149,30 @@
           "in": "path",
           "name": "packageName",
           "required": true,
-          "type": "string"
+          "schema":{
+            "type": "string"
+          }
         }, {
           "in": "path",
           "name": "productId",
           "required": true,
-          "type": "string"
+          "schema":{
+            "type": "string"
+          }
         }, {
           "in": "path",
           "name": "basePlanId",
           "required": true,
-          "type": "string"
+          "schema":{
+            "type": "string"
+          }
         }, {
           "in": "path",
           "name": "offerId",
           "required": true,
-          "type": "string"
+          "schema":{
+            "type": "string"
+          }
         }],
         "responses": {
           "200": {
