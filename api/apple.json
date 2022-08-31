@@ -3,7 +3,11 @@
   "info": {
     "title": "Apple Store Connect API Explorer",
     "version": "1.0.0",
-    "description": "Apple Store Connect API that uses a service account - [Apple Store Connect API](https://developer.apple.com/documentation/appstoreconnectapi) - [Service account configuration](https://docs.revenuecat.com/docs/in-app-purchase-key-configuration)"
+    "description": "Apple Store Connect API that uses a service account - [Apple Store Connect API](https://developer.apple.com/documentation/appstoreconnectapi) - [Service account configuration](https://docs.revenuecat.com/docs/in-app-purchase-key-configuration)",
+    "license": {
+      "name": "Apache 2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
+    }
   },
   "servers": [{
     "url": "https://api.appstoreconnect.apple.com"
@@ -14,7 +18,9 @@
   "paths": {
     "/v1/apps/{id}/inAppPurchasesV2": {
       "get": {
+        "summary": "summary",
         "tags": ["In-App Purchase"],
+        "operationId": "getInAppPurchases",
         "parameters": [{
           "in": "path",
           "name": "id",
