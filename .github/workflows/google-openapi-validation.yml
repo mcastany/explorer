@@ -7,9 +7,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Google OpenAPI Lint Checks
-        uses: mcastany/openapi-action@1.0.2
+        uses: mcastany/openapi-action@1.0.3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           file: api/google.json
           title: "Google OpenAPI Lint Checks" 
-          configuration_file: ''
