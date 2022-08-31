@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="SwaggerUI" />
+  <title>Apple Connect API Explorer</title>
+  <link rel="shortcut icon" type="image/png" href="https://www.gstatic.com/devrel-devsite/prod/v03524b055229ae2d7e36c2f7867401f3447503fd5c5c18fd5cdefd483b35c9b4/developers/images/favicon.png">
+  <link rel="stylesheet" href="../styles/swagger-ui.css" />
+</head>
+
+<body>
+  <div id="swagger-ui"></div>
+  <script src="../scripts/swagger-ui-bundle.js"></script>
+  <script src="../scripts/swagger-ui-standalone-preset.js"></script>
+  <script>
+    window.onload = () => {
+      const spec = {
+  "openapi": "3.0.2",
+  "info": {
+    "title": "Apple Store Connect API Explorer",
+    "version": "1.0.0",
+    "description": "Apple Store Connect API that uses a service account - [Apple Store Connect API](https://developer.apple.com/documentation/appstoreconnectapi) - [Service account configuration](https://docs.revenuecat.com/docs/itunesconnect-app-specific-shared-secret)"
+  },
+  "servers": [{
+    "url": "https://api.appstoreconnect.apple.com"
+  }],
+  "security": [{
+    "apple": []
+  }],
+  "paths": {
+    "/v1/apps/{id}/inAppPurchasesV2": {
+      "get": {
+        "tags": ["In-App Purchase"],
+        "parameters": [{
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "type": "string"
+        }],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "apple": {
+        "type": "oauth2",
+        "flows": {
+          "appleServiceAccount": {
+            "keyId": "keyId",
+            "privateKey": "privateKey",
+            "issuerId": "issuerId"
+          }
+        }
+      }
+    }
+  }
+};
+      window.ui = SwaggerUIBundle({
+        // url: '../api/apple.json',
+        spec,
+        // url: "https://mcastany.github.io/explorer/api/apple.json",
+        supportedSubmitMethods: ["get"],
+        dom_id: '#swagger-ui'
+      });
+    };
+  </script>
+</body>
+
+</html>
