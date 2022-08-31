@@ -8,4 +8,3 @@ lint:
   rules:
     no-unused-components: error
     operation-operationId: off
-    spec: off

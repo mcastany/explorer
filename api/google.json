@@ -296,7 +296,7 @@
       "google": {
         "type": "oauth2",
         "flows": {
-          "googleServiceAccount": {
+          "x-googleServiceAccount": {
             "tokenUrl": "https://oauth2.googleapis.com/token"
           }
         }
