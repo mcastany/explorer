@@ -12,3 +12,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           file: api/google.json
           title: "Google OpenAPI Lint Checks" 
+          configuration_file: ''
