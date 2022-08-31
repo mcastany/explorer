@@ -1,9 +1,13 @@
 {
   "openapi": "3.0.2",
   "info": {
-    "title": "Google API Explorer Test",
+    "title": "Google API Explorer",
     "version": "1.0.0",
-    "description": "Google Play Android Developer API that uses a service account - [Google Play Android Developer API](https://developers.google.com/android-publisher/api-ref/rest) - [Service account configuration](https://docs.revenuecat.com/docs/creating-play-service-credentials)"
+    "description": "Google Play Android Developer API that uses a service account - [Google Play Android Developer API](https://developers.google.com/android-publisher/api-ref/rest) - [Service account configuration](https://docs.revenuecat.com/docs/creating-play-service-credentials)",
+    "license": {
+      "name": "Apache 2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
+    }
   },
   "servers": [{
     "url": "https://androidpublisher.googleapis.com/androidpublisher/v3"
