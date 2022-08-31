@@ -1,4 +1,4 @@
-name: GitHub Actions Demo
+name: OpenAPI Validation
 on:
   push:
     branches:
