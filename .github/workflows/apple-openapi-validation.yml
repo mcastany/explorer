@@ -1,4 +1,4 @@
-name: OpenAPI Validation
+name: Apple OpenAPI Validation
 on: [pull_request]
 jobs:
   lint:
