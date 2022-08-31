@@ -60,7 +60,9 @@
           "in": "path",
           "name": "token",
           "required": true,
-          "type": "string"
+          "schema":{
+            "type": "string"
+          }
         }],
         "responses": {
           "200": {
@@ -290,7 +292,7 @@
       "google": {
         "type": "oauth2",
         "flows": {
-          "googleServiceAccount": {
+          "x-googleServiceAccount": {
             "tokenUrl": "https://oauth2.googleapis.com/token"
           }
         }
