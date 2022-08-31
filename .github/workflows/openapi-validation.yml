@@ -8,4 +8,4 @@ jobs:
         uses: nwestfall/openapi-action@v1.0.2
         with:
           github_token: ${{ secrets.GH_TOKEN }}
-          file: FILE_PATH
+          file: api/google.json
