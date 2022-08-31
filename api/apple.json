@@ -19,7 +19,9 @@
           "in": "path",
           "name": "id",
           "required": true,
-          "type": "string"
+          "schema":{
+            "type": "string"
+          }
         }],
         "responses": {
           "200": {
@@ -34,7 +36,7 @@
       "apple": {
         "type": "oauth2",
         "flows": {
-          "appleServiceAccount": {
+          "x-appleServiceAccount": {
             "keyId": "keyId",
             "privateKey": "privateKey",
             "issuerId": "issuerId"
