@@ -12,3 +12,9 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           file: api/google.json
           title: "Google OpenAPI Lint Checks" 
+      - name: Apple OpenAPI Lint Checks
+        uses: mcastany/openapi-action@1.0.3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          file: api/apple.json
+          title: "Apple OpenAPI Lint Checks" 
