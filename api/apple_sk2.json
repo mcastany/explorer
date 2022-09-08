@@ -1,0 +1,56 @@
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "Apple Store Connect 2 API Explorer",
+    "version": "1.0.0",
+    "description": "Apple Store Connect API that uses a service account - [Apple Store Connect API](https://developer.apple.com/documentation/appstoreconnectapi) - [Service account configuration](https://docs.revenuecat.com/docs/in-app-purchase-key-configuration)",
+    "license": {
+      "name": "Apache 2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "servers": [{
+    "url": "https://api.storekit.itunes.apple.com"
+  },{
+    "url": "https://api.storekit-sandbox.itunes.apple.com"
+  }],
+  "security": [{
+    "apple": []
+  }],
+  "paths": {
+    "/v1/apps/{id}/inAppPurchasesV2": {
+      "get": {
+        "summary": "summary",
+        "tags": ["In-App Purchase"],
+        "operationId": "getInAppPurchases",
+        "parameters": [{
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "schema":{
+            "type": "string"
+          }
+        }],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "apple": {
+        "type": "oauth2",
+        "flows": {
+          "x-appleServiceAccount-2": {
+            "keyId": "keyId",
+            "privateKey": "privateKey",
+            "issuerId": "issuerId"
+          }
+        }
+      }
+    }
+  }
+}

@@ -53,7 +53,7 @@
       "apple": {
         "type": "oauth2",
         "flows": {
-          "appleServiceAccount": {
+          "x-appleServiceAccount": {
             "keyId": "keyId",
             "privateKey": "privateKey",
             "issuerId": "issuerId"
@@ -68,7 +68,8 @@
         spec,
         // url: "https://mcastany.github.io/explorer/api/apple.json",
         supportedSubmitMethods: ["get"],
-        dom_id: '#swagger-ui'
+        dom_id: '#swagger-ui',
+        withCredentials: true
       });
     };
   </script>
