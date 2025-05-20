@@ -372,11 +372,14 @@
             "in": "query",
             "name": "orderIds",
             "required": true,
-            "type": "array",
-            "items": {
-              "type": "string"
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
-            "collectionFormat": "multi",
+            "style": "form",
+            "explode": true,
             "description": "The order IDs to retrieve"
           }
         ],
