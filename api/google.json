@@ -268,10 +268,39 @@
         }
       }
     },
+    "/applications/{packageName}/purchases/productsv2/tokens/{token}": {
+      "get": {
+        "summary": "summary",
+        "tags": ["Purchase Products V2"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "packageName",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "token",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/applications/{packageName}/purchases/products/{productId}/tokens/{token}": {
       "get": {
         "summary": "summary",
-        "tags": ["Purchase Products"],
+        "tags": ["Purchase Products V1"],
         "parameters": [
           {
             "in": "path",
