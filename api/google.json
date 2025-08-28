@@ -355,6 +355,27 @@
         }
       }
     },
+    "/applications/{packageName}/oneTimeProducts": {
+      "get": {
+        "summary": "summary",
+        "tags": ["One Time Products"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "packageName",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/applications/{packageName}/inappproducts": {
       "get": {
         "summary": "summary",
