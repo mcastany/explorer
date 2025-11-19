@@ -367,6 +367,25 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "in": "query",
+            "name": "pageSize",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 1000
+            },
+            "description": "Optional. Max number of one-time products to return. Defaults to 50."
+          },
+          {
+            "in": "query",
+            "name": "pageToken",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Optional. Token for fetching the next page of one-time products."
           }
         ],
         "responses": {
@@ -396,6 +415,62 @@
             "schema": {
               "type": "string"
             }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/applications/{packageName}/oneTimeProducts/{productId}/purchaseOptions/{purchaseOptionId}/offers": {
+      "get": {
+        "summary": "summary",
+        "tags": ["One Time Products"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "packageName",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "productId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "purchaseOptionId",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "pageSize",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 1000
+            },
+            "description": "Optional. Max number of offers to return. Defaults to 50."
+          },
+          {
+            "in": "query",
+            "name": "pageToken",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Optional. Token for fetching the next page of offers."
           }
         ],
         "responses": {
